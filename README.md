@@ -86,7 +86,7 @@ After having heard of the write-once-run-everywhere ambitions from the Google IO
 Isolating fragment tests has also been quite messy historically, but with the new `FragmentScenario` it has become a cakewalk basically. Here is an example of a fragment unit test from the project:
 ```kotlin
 @Test
-fun clickFastForward_ShouldDelegateToViewModel() {
+fun whenPlaying_clickFastForward_ShouldDelegateToViewModel() {
     launch {
         `when`(mockPlayingState.initial).thenReturn(true)
         `when`(viewModel.state).thenReturn(mutableLiveDataOf(mockPlayingState))

@@ -347,7 +347,7 @@ class VideoDetailFragmentTest : BaseFragmentTest<VideoDetailFragment, VideoDetai
     }
 
     @Test
-    fun clickCloseVideo_ShouldDelegateToViewModel() {
+    fun whenPlaying_clickCloseVideo_ShouldDelegateToViewModel() {
         launch {
             `when`(mockPlayingState.initial).thenReturn(true)
             `when`(viewModel.state).thenReturn(mutableLiveDataOf(mockPlayingState))
@@ -368,7 +368,7 @@ class VideoDetailFragmentTest : BaseFragmentTest<VideoDetailFragment, VideoDetai
     }
 
     @Test
-    fun clickRewind_ShouldDelegateToViewModel() {
+    fun whenPlaying_clickRewind_ShouldDelegateToViewModel() {
         launch {
             `when`(mockPlayingState.initial).thenReturn(true)
             `when`(viewModel.state).thenReturn(mutableLiveDataOf(mockPlayingState))
@@ -389,7 +389,7 @@ class VideoDetailFragmentTest : BaseFragmentTest<VideoDetailFragment, VideoDetai
     }
 
     @Test
-    fun clickFastForward_ShouldDelegateToViewModel() {
+    fun whenPlaying_clickFastForward_ShouldDelegateToViewModel() {
         launch {
             `when`(mockPlayingState.initial).thenReturn(true)
             `when`(viewModel.state).thenReturn(mutableLiveDataOf(mockPlayingState))
@@ -410,7 +410,7 @@ class VideoDetailFragmentTest : BaseFragmentTest<VideoDetailFragment, VideoDetai
     }
 
     @Test
-    fun clickFullscreen_ShouldDelegateToViewModel() {
+    fun whenPlaying_clickFullscreen_ShouldDelegateToViewModel() {
         launch {
             `when`(mockPlayingState.initial).thenReturn(true)
             `when`(viewModel.state).thenReturn(mutableLiveDataOf(mockPlayingState))
